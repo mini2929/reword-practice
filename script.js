@@ -19,3 +19,29 @@ for(let i = 0; i < lis.length; i++) {console.log(lis[i])};
 // <= 크거나 같냐 혹은 < 크다 랑 주의할 것
 for(let i = 0; i <= 3; i++ ) console.log(lis[i]);
 // 한 줄일경우 중괄호{} 생략 가능
+
+// 자바스크립트에서 함수 만드는 법
+// 1. 함수 선언식
+function plus (num1, num2){
+    const result = num1+num2;
+    return result;
+}
+
+console.log(plus(2,4));
+
+// 2. 함수 표현식(대입형함수, 변수에 익명함수 대입)
+const minus = function(num1,num2) {
+    const result = num1 - num2;
+    return result; // 6
+};
+
+console.log(minus(3,1)); // 2
+
+// 3. 화살표 함수로 축약된 함수 표현식
+const multiply = (num1, num2) => {
+    return num1*num2;
+};
+// 화살표 함수에서는 function 키워드 생략, 중괄호 안쪽에 return문만 있으면 중괄호와 return문도 생략 가능
+// const multiply = (num1, num2) => num1*num2;
+
+console.log(multiply(3,3)); // 9
